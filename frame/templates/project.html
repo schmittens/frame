@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+    {% block content %}
+    <h1>{{ project.title }}</h1>
+
+    <p class="lead">{{ project.short }}</p>
+
+    {% include "project_gallery.html" %}
+
+
+    <div class="">
+        <!--
+        <div class="col-xs-12 col-md-0">
+            {% for image in project.images %}
+                {% if forloop.counter == 1 %}
+                    <img src="{{ MEDIA_URL }}{{ forloop.counter }}.png" class="img-responsive" alt="Image {{ forloop.counter }}">
+                {% endif %}
+            {% endfor %}
+        </div>
+        -->
+
+        <p>{{ project.text|linebreaksbr }}</p>
+
+        <!--
+        <div class="col-xs-12 col-sm-6 col-md-5">
+        {% for image in project.images %}
+            {% if forloop.counter > 1 %}
+                <img src="{{ MEDIA_URL }}{{ forloop.counter }}.png" class="img-responsive" alt="Image {{ forloop.counter }}">
+            {% endif %}
+        {% endfor %}
+        </div>
+        -->
+    </div>
+
+    {% endblock %}

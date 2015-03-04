@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{general_text.site}}</title>
+</head>
+<body>
+	<div>
+		{% include 'nav.html' %}
+	</div>
+
+    <h1>{{ project.title }}</h1>
+        <table>
+            {% for key, value in html %}
+            <tr><td>{{key}}</td><td>{{value}}</td></tr>
+            {% endfor %}
+
+        </table>
+
+
+</body>
+</html>
+
+

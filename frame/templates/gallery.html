@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+
+    {% block content %}
+
+    <h1>Gallery</h1>
+
+        <dl>
+            <div class="">
+            {% for project in gallery %}
+
+                    <dt>
+                        <a href="{{ project.url }}">{{ project.title }}</a>
+                    </dt>
+
+                    <dd class="spacer-bottom">
+                        {{ project.short }}
+                    </dd>
+                    <div class="row">
+                        {% for image in project.images %}
+                            {% if forloop.counter > 0 %}
+                                <a href="../projects/{{ project.folder }}/{{ forloop.counter}}.png"><img src="../projects/{{ project.folder }}/{{ forloop.counter}}.png" class="img-responsive col-xs-12 col-sm-6 col-md-4 spacer-bottom"></a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+            <br>
+            {% endfor %}
+            </div>
+        </dl>
+
+
+    {% endblock %}

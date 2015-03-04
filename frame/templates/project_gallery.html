@@ -1,0 +1,19 @@
+
+
+
+    {% block content %}
+
+<div class="row">
+
+
+        <dl>
+
+            {% for image in project.images %}
+                {# if forloop.counter < 3 #}
+                <a href="../{{ project.folder }}/{{ forloop.counter}}.png"><img src="../{{ project.folder }}/{{ forloop.counter}}.png" class="img-responsive col-xs-12 col-sm-6 col-md-4 spacer-bottom"></a>
+                {# endif #}
+            {% endfor %}
+        </dl>
+</div>
+
+    {% endblock %}

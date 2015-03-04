@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+
+    {% block content %}
+
+    <h1>Projects </h1>
+
+        <!--
+        <ul class="list-unstyled">
+            {% for project in projects %}
+            <li>
+                <img src="{{ MEDIA_URL }}{{ project.folder }}/1.png" alt=" {{ project.title }}">
+                Project {{ forloop.counter }}: <a href="{{ project.url }}">{{ project.title }}</a>
+                <br>
+                {{ project.short }}
+
+            </li>
+            {% endfor %}
+        </ul>
+        -->
+
+        <dl>
+            {% for project in projects %}
+
+
+            <div class="row spacer-bottom">
+
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <a href="{{ project.url }}"><img src="{{ MEDIA_URL }}{{ project.folder }}/thumb.png" class="img-responsive" alt=" {{ project.title }}"></a>
+                </div>
+
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+
+                    <dt>
+                        Project {{ forloop.counter }}: <a href="{{ project.url }}">{{ project.title }}</a>
+                    </dt>
+
+                    <dd>
+                        {{ project.short }}
+                    </dd>
+                </div>
+
+            </div>
+
+            {% endfor %}
+        </dl>
+
+    {% endblock %}

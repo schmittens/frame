@@ -26,7 +26,7 @@ duplicity==0.6.23
 geojson==1.0.9
 glob2==0.4.1
 html5lib==0.999
-httplib2==0.8
+httplib2==0.18.0
 keyring==3.5
 launchpadlib==1.10.2
 lazr.restfulclient==0.13.3

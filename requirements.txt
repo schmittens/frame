@@ -68,7 +68,7 @@ stevedore==1.1.0
 system-service==0.1.6
 unity-lens-photos==1.0
 urlgrabber==3.9.1
-urllib3==1.7.1
+urllib3==1.26.5
 virtkey==0.63.0
 virtualenv==1.11.6
 virtualenv-clone==0.2.5

@@ -25,7 +25,7 @@ dnspython==1.11.1
 duplicity==0.6.23
 geojson==1.0.9
 glob2==0.4.1
-html5lib==0.999
+html5lib==0.99999999
 httplib2==0.8
 keyring==3.5
 launchpadlib==1.10.2
